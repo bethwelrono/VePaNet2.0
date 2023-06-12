@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vehicle-passenger</title>
+    <!-- main stylesheet link -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+      <!-- bootstrap css link -->
+      <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+      <!-- font awesome-->
+      <link rel="stylesheet" href="./assets/css/all.min.css">
+    
+</head>
+
+<body style="background-color: papayawhip;" onload="getMap()">
+    <div class="conatainer align-items-center">
+        <h1 class="container-fluid bg-dark mb-2 text-light text-center track"> Track and book your vehicle on Real time basis</h1>
+        <p class="align-items-center text-success text-center h2 text-">Enter your travelling routine and travel
+            efficiently,
+            save time and improve your security.
+        </p>
+        <div class="dropdown container-fluid">
+            <button class="btn btn-primary dropdown-toggle mb-2 mt-4 w-50" type="button" id="destinationDropdown" data-bs-toggle="dropdown" aria-expanded="false"
+            style="margin-left:30%";>
+              Select Destination
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="destinationDropdown">
+              <li><a class="dropdown-item" href="#" onclick="selectCity('Eldoret', 0.5143, 35.27)">Eldoret</a></li>
+              <li><a class="dropdown-item" href="#" onclick="selectCity('Kesses', 0.2750,35.3466)">Kesses</a></li>
+              <li><a class="dropdown-item" href="#" onclick="selectCity('Nairobi', -1.2921, 36.8219)" >Nairobi</a></li>
+              <li><a class="dropdown-item" href="#" onclick="selectCity('Kisumu')">Kisumu</a></li>
+              <li><a class="dropdown-item" href="#" onclick="selectCity('Nakuru')">Nakuru</a></li>
+              <li><a class="dropdown-item" href="#" onclick="selectCity('Iten')">Iten</a></li>
+              <li><a class="dropdown-item" href="#" onclick="selectCity('Mombasa')">Mombasa</a></li>
+            </ul>
+          </div>
+          </div>
+                    <div class="mt-2" id="map" style="position:relative;width:100%;height:600px;">
+                    </div>
+            
+        </div>
+        </div>
+    
+     <!--Contact Info  -->
+<section class="footer mt-0">
+          <ul class="list-group list-group-flush lead text-center">
+  <li class="list-group-item">
+    <span class="fw-bold">
+   VepaNet
+    </span> 
+Copright@2023 All rights reserved.
+<span class="text-danger">
+<br>
+ FinalYear EngineeringProject@2023
+</span>
+  
+  </li>
+          </ul>
+        </div>
+  </section>
+      <!-- main section ends here -->
+
+<!-- bing maps -->
+<script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=AhUPxRbIrpeLSWIQk_IYqaj5t3hDHNZPP1qk56wCg22kG8w7yg4AFQt46CHc6omQ' async defer></script>
+
+    <!-- jquery link -->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+
+    <!-- bootstrap -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <!-- font awesome -->
+    <script src="./assets/js/all.min.js"></script>
+
+    <!-- main main.js link -->
+    <script src="./assets/js/main.js"></script>
+    
+</body>
+
+</html>

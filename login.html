@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle-passenger</title>
+
+      <!-- bootstrap css link -->
+      <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+      <!-- font awesome-->
+      <link rel="stylesheet" href="./assets/css/all.min.css">
+  
+      <!-- main stylesheet link -->
+      <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="bg-warning">
+
+    <!-- login form start here -->
+<section >
+  <div class="text-center">
+    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+      style="width: 150px;" alt="logo">
+    <h4 class="mt-1 mb-1">Enjoy Our Travelling Services</h4>
+  </div>
+  <div class="container align-items-center text-center">
+  
+  
+    <div class="row justify-content-center align-items-center
+    inner-row form-control mt-1 mx-1 text-center">
+      <div class="col">
+         <!-- login -->
+        <div class="form-box login-form p-2">
+          <div class="form-title">
+            <h2 class="fw-bold mb-3"> Login</h2>
+          </div>
+          <form action="">
+            <div class="form mb-3">
+              <div>
+              <label for="emailInput">Enter Email</label></div>
+              <input type="email" id="email2"  class="form-control-sm mt-2"
+              placeholder="enter email" id="floatinInput" required
+              style="width: 300px;">
+             
+            </div>
+            <div class="form mb-3">
+            <div><label for="password" >Enter Password</label></div>
+              <input type="password" id="password2"  class="form-control-sm mt-2 "
+              placeholder="enter password" id="floatPassword" required
+              style="width: 300px;"
+              >
+              
+            </div>
+            <div class="mt-3">
+              <a href="main.html" class="btn btn-primary btn-md loginbtn" id="loginBtn">Login</a>
+            </div>
+            <div class="mt-3">
+              <span>Don't have an account?</span>
+              <button class="btn signup-show btn-info"> Sign Up</button>
+            </div>
+          </form>
+        </div>
+  
+        <!-- signup -->
+        <div class="form-box signup-form p-1">
+          <div class="form-title">
+            <h2 class="fw-bold mb-3"> Create Your Account</h2>
+          </div>
+          <form action="">
+            <div class="form mb-3">
+            <div> <label for="lastName">Enter Username</label></div>
+              <input type="text" class="form-control-sm mt-2"
+              placeholder="enter username" id="username" required  style="width: 300px;">
+            </div>
+            <div class="form mb-3">
+            <div> <label for="emailInput">Enter Email</label></div>
+              <input type="email"  class="form-control-sm mt-2"
+              placeholder="enter email" id="email" required  style="width: 300px;">
+            </div>
+            <div class="form mb-3">
+            <div> <label for="password">Enter Password</label></div>
+              <input type="password" class="form-control-sm mt-2"
+              placeholder="enter password" id="password" required  style="width: 300px;">
+              
+            </div> 
+            <div class="mt-3">
+              <button class="btn btn-primary btn-md signup"
+              id="signup"> SignUp</button>
+            </div>
+            <div class="mt-3">
+              <span>Already have an account?</span>
+              <button class="btn btn-info login-show"> Login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+   </div>
+
+</section>
+                  
+    <!-- login form ends here -->
+    
+     <!-- jquery link -->
+     <script src="/node_modules/jquery/dist/jquery.js"></script>
+
+     <!-- bootstrap -->
+     <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+     <script>
+      $(document).ready(function(){
+      // Show Signup form when the "Don't have an account? Sign up" button is clicked
+      $('.signup-show').on('click', function (e) {
+        e.preventDefault(); // prevent default button behavior (submitting the form)
+        $('.signup-form').show(); // show the signup form
+        $('.login-form').hide(); // hide the login form
+      });
+      
+      // Show Login form when the "Already have an account? Login" button is clicked
+      $('.login-show').on('click', function (e) {
+        e.preventDefault(); // prevent default button behavior (submitting the form)
+        $('.signup-form').hide(); // hide the signup form
+        $('.login-form').show(); // show the login form
+      });
+    });
+    
+          //login ends here
+      </script>
+ 
+     <!-- font awesome -->
+     <script src="./assets/js/all.min.js"></script>
+
+     <!-- firebase -->
+     <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+      import { getDatabase, set,ref } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js";
+      import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword
+      } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyBNd-xFRZ3bJFd3I-SSWQElIRDbyETf5tE",
+        authDomain: "signuplogin-auth.firebaseapp.com",
+        databaseURL: "https://signuplogin-auth-default-rtdb.firebaseio.com",
+        projectId: "signuplogin-auth",
+        storageBucket: "signuplogin-auth.appspot.com",
+        messagingSenderId: "270632562146",
+        appId: "1:270632562146:web:0896f5603b0f502c259dbb"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const database = getDatabase(app);
+      const auth = getAuth();
+      //signup
+      signup.addEventListener('click', (e) => {
+
+        let email = document.getElementById('email').value;
+        let password = document.getElementById('password').value;
+        let username = document.getElementById('username').value;
+        const auth = getAuth();
+createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    set(ref(database, 'users/' + user.uid),{
+      username: username,
+      email: email
+    })
+    alert('user created!');
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+
+    alert('errorMessage');
+    // ..
+  });
+      });
+    //login
+      loginBtn.addEventListener('click', (e) => {
+
+let email = document.getElementById('email2').value;
+let password = document.getElementById('password2').value;
+const auth = getAuth();
+signInWithEmailAndPassword(auth, email, password)
+.then((userCredential) => {
+// Signed in 
+const user = userCredential.user;
+set(ref(database, 'users/' + user.itd),{
+username: username,
+email: email
+})
+alert('user signed in!');
+// ...
+});
+firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
+      window.open("main.html");
+    })
+.catch((error) => {
+const errorCode = error.code;
+const errorMessage = error.message;
+
+alert('errorMessage');
+// ..
+});
+});
+      //firebase ends here
+ </script>
+</body>
+</html>

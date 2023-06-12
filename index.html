@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle-passenger</title>
+
+  <!-- bootstrap css link -->
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+  <!-- font awesome-->
+  <link rel="stylesheet" href="./assets/css/all.min.css">
+
+  <!-- main stylesheet link -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body class="position-relative">
+
+  <!-- header section begins here -->
+  <header class="p-2 py-3 d-flex justify-content-between align-items-center bg-dark ">
+    <div class="d-flex flex-row align-items-center">
+      <!-- toggle menu -->
+      <button class="btn text-white me-3 btn-menu" id="toggleBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+      <a href="#" class="logo d-block text-decoration-none text-white px-4"> <span class="text-warning"
+          style="font-weight: bold; font-family: roboto; font-size: 25px; ">
+          V</span>ePaNet</a>
+    </div>
+
+    <!-- navbar -->
+    <nav class="nav bg-dark" id="nav">
+      <a href="./index.html" class="nav-links text-decoration-none mx-5"><i class="fas fa-home me-1"></i> Home</a>
+      <a href="#services" class="nav-links text-decoration-none mx-5"><i class="fas fa-car me-1"></i> Services</a>
+      <a href="#about" class="nav-links text-decoration-none mx-5"><i class="fas fa-info-circle me-1"></i> About</a>
+    </nav>
+
+    <!-- login and sign up -->
+    <div class="d-flex flex-row">
+      <a href="login.html" class="btn btn-primary me-3">Login</a>
+    </div>
+  </header>
+  <!-- header section ends here -->
+
+  <!-- main section begins here -->
+  <main class="main" id="main" style="margin-top: 77px;">
+    <div class="container-fluid bg-primary mb-2 text-center">
+      <img src="./assets/images/redseats.jpg" alt="" class="img-fluid" style="height: 600px;width: 100%;"
+        alt="Responsive image">
+      <div class=" welcome position-absolute text-light d-flex justify-content-center flex-column text-center"
+        style="top: 35px;">
+        <h4 style="font-size: 48px;">Welcome To VePaNet</h4>
+        <div class="mt-5">
+          <h3 style="font-size: 40px; color: rgb(246, 255, 0); ">We Provide Top <br>
+            Notch Services</h3>
+
+          <a href="login.html" class=" btn btn-warning btn-lg mt-5">
+            DISCOVER MORE
+          </a>
+          <h3 class="mt-3" style="font-size: 40px; color: rgb(255, 255, 255); ">Travel with us <br>
+            today. Enjoy!</h3>
+        </div>
+      </div>
+
+    </div>
+    <!-- our services -->
+    <h2 id="services" class=" text-center pt-2 mx-2" style="color: rgb(102, 0, 255);
+        background-color: papayawhip; font-weight: bold;font-size: 40px;">Our Services </h2>
+    <section class=" pb-3 " style="background-color: black;">
+      <div class="container-fluid">
+        <div class="row text-center g-2">
+          <div class="col-md">
+            <div class="card bg-secondary text-light h-100">
+              <div class="card-body text-center">
+                <div class="card-title mb-3">
+                  <p class="card-text lead">
+                    Track the closest vehicle serving your route and going towards
+                    your destination from the comfort of your house.
+                    <br>Enjoy your ride!
+                  </p>
+                  <div class="mt-3">
+                    <a href="http://www.gpsoo.net/" class="btn btn-primary btn-md"> Check Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-secondary text-light h-100">
+              <div class="card-body text-warning">
+                <div class="card-title mb-3">
+                  <p class="card-text lead">
+                    <b>For Schools only!</b></br>
+                    Track the location of the children's bus on real-time
+                    basis. It's location will be displayed to registered parents
+                    and schools only!.
+                  </p>
+                  <div class="mt-3">
+                    <button class="btn btn-primary btn-md view" id="view" onclick="getMap2()"> View Now</button>
+                    <div class="mt-2" id="map2" style="position:relative;width:100%;height:500px; display: none;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- our services -->
+    <!-- photos -->
+    <div class="container-fluid mt-5 bg-warning">
+      <div class="row">
+        <div class="col-md">
+          <img src="assets/images/s.2.JPG" class="img-fluid h-100" alt="">
+        </div>
+        <div class="col-md">
+          <img src="assets/images/pic2.jpg" class="img-fluid h-100" alt="">
+        </div>
+        <div class="col-md">
+          <img src="assets/images/s.1.JPG" class="img-fluid h-100" alt="">
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-md mt-md-2">
+          <img src="assets/images/pic1.jpg" class="img-fluid h-100" alt="">
+        </div>
+        <div class="col-md mt-md-2">
+          <img src="assets/images/pic4.jpeg" class="img-fluid h-100" alt="">
+        </div>
+        <div class="col-md mt-md-2">
+          <img src="assets/images/pic3.jpg" class="img-fluid h-100" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- photos -->
+    <!--about start here -->
+    <h2 id="about" class="text-center pt-2 mx-2" style="color: rgb(32, 58, 227);
+        background-color: papayawhip; font-weight: bold; font-size: 40px;">ABOUT THE SYSTEM</h2>
+    <section class=" pb-3" style="background-color: black;">
+      <div class="container-fluid">
+        <div class="row text-center g-2">
+          <div class="col-md-6">
+            <div class="card bg-dark text-light h-100">
+              <div class="card-body text-center">
+                <div class="card-title mb-3">
+                  <p class="card-text lead">
+                    Create a communication system that
+                    connects passengers with public service vehicles simply and
+                    efficiently thus saving time and increasing productivity.
+                    To provide the vehicle company with accurate and real-time
+                    data on booking for efficient and informed route planning.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 ">
+            <div class="card bg-dark text-light h-100">
+              <div class="card-body text-center">
+                <div class="card-title mb-3">
+                  <p class="card-text lead">
+                    Give accurate and real-time details to the passenger
+                    about the public service vehicles serving the route
+                    closest to their location and going towards their
+                    destination and thus increase the satisfaction of
+                    passengers in the road transport sector.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="col-md">
+              <div class="card bg-dark text-light h-100">
+                <div class="card-body text-center">
+                  <div class="card-title mb-3">
+                    <p class="card-text lead">
+                      Ease the traffic congestion of passengers and
+                      vehicles usually witnessed at bus terminals in major
+                      cities and towns by ensuring that you can wait for your
+                      bus at the closest stopping point, and no need to
+                      go to town.
+                      Save your time by ensuring you get right vehicle
+                      heading to the place of your needs.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="col-md">
+              <div class="card bg-dark text-light h-100">
+                <div class="card-body text-center">
+                  <div class="card-title mb-3">
+                    <p class="card-text lead">
+                      Enable parents and schools track the current loaction of their buses.
+                      This will help parents avail their children at the picking points at
+                      the required time. Also in the evening when the children are dropped from
+                      school, the parents and schoool administration is able to know the current
+                      location of their bus.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about ends here -->
+
+    <!-- scroll to top button -->
+    <a id="back-to-top" href="#" class="btn btn-lg back-to-top" role="button"> <i fas fa-chevron-up></i></a>
+    <!-- scroll to top button -->
+
+    <!--Contact Info  -->
+    <section class="p-5">
+      <div class="container ">
+        <div class="row g-4">
+          <div class="col-md">
+            <h2 class="text-center mb-4 " style="color: rgb(255, 170, 0);">Contact Info</h2>
+            <ul class="list-group list-group-flush lead text-center">
+              <li class="list-group-item">
+                <span class="fw-bold">
+                  Main Location:
+                </span> Eldoret Kenya.
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">
+                  Phone Number:
+                </span> +254**********.<br>
+                +2547*********
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">
+                  Email Contact:
+                </span> kemboi******@gmail.com. <br>
+                bethwelkiprono7@gmail.com
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- main section ends here -->
+    <!-- bing maps -->
+    <script type='text/javascript'
+      src='https://www.bing.com/api/maps/mapcontrol?key=AhUPxRbIrpeLSWIQk_IYqaj5t3hDHNZPP1qk56wCg22kG8w7yg4AFQt46CHc6omQ'
+      async defer>
+      </script>
+    <!-- jquery link -->
+    <script src="./assets/js/jquery.js"></script>
+
+    <!-- bootstrap -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- font awesome -->
+    <script src="./assets/js/all.min.js"></script>
+
+    <!-- main main.js link -->
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

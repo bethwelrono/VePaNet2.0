@@ -1,0 +1,94 @@
+@import url(/assets/css/fonts.css);
+
+* {
+  font-family: roboto;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  min-height: 8vh;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 99;
+}
+
+.btn-menu {
+  display: none;
+  border: 1px solid #ffffff;
+  outline: none;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav a {
+  color: #ffffff;
+  font-size: 17px;
+}
+
+.nav a:hover {
+  color: #b9b6b6;
+}
+.back-to-top {
+  position: fixed;
+  bottom: 35px;
+  right: 30px;
+  display: none;
+  background-color: red;
+  height: 25px;
+  transition: 0.9s ease;
+}
+.welcome {
+  top: 50%;
+}
+#next {
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+}
+.signup-form {
+  display: none;
+}
+.dropdown-item{
+  font-size: 20px;
+}
+.dropdown-toggle{
+font-size: 26px;
+}
+/* navbar styling begins here */
+@media screen and (max-width: 960px) {
+  .btn-menu {
+    display: inline-block;
+  }
+
+  .nav {
+    position: fixed;
+    top: 70px;
+    left: -5500px;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    transition: left 0.9s ease;
+  }
+
+  .nav a {
+    display: block;
+    margin-bottom: 105px;
+  }
+
+  .nav a:hover {
+    font-size: 18px;
+  }
+
+  .show {
+    left: 0;
+  }
+}
